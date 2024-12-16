@@ -25,12 +25,21 @@ export default function TabLayout() {
           },
           default: {},
         }),
+        headerRight: () => <Text style={{ color: 'white' }}>➕</Text>,
       }}>
       <Tabs.Screen
         name="index"
         options={{
           title: 'Home',
           tabBarIcon: ({ color }) => <Icon size={28} name="home" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="newpost"
+        options={{
+          title: 'New Post',
+          tabBarIcon: ({ color }) => <Icon size={28} name="plus" color={color} />,
+
         }}
       />
       <Tabs.Screen
